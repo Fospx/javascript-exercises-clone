@@ -1,25 +1,18 @@
-const removeFromArray = function() {
+const removeFromArray = function(array, ...args) {
 
+const newArray = [];
 
- // check if the first part of the function argument is an array
- if (Array.isArray(arguments[0]) === true)
- {
-    array = arguments[0];    
-           
- }
+array.forEach((item) => {
+   if (!args.includes(item)) {
+      newArray.push(item)
+   }
+});
 
-let word = "";
-for (i = 0; i < array.length; i++)
-{
-    word += array[i];
-}
-
- return word;
-
+return newArray;
 
 };
 
-removeFromArray([1,2,3,4], 3)
+removeFromArray([1,2,3,4], 1, 2)
 
 // Do not edit below this line
 module.exports = removeFromArray;
