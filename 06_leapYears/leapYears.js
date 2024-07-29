@@ -1,19 +1,32 @@
 const leapYears = function(year) {
-    
-    let answer = 0;
-    let check_if_integer;
-    answer = year / 4
-    check_if_integer = Number.isInteger(answer);
 
-    if (check_if_integer === true)
+
+    // create a variable to hold the value of the year
+    // make the calculations, //
+    // see if it is divisable by 4 and gives us an integer and/or check to see if it is divisble by 400 and gives us an integer
+    // if it does give an integer... we are not done yet because....
+    // check to see if dividing by 100 gives us an integer
+    // if it does, then return false because the year divided by 100 is not a leap year
+    // else if it does not return an integer then it is a leap year and divisble by 4 or by 400.
+
+let yearChecker; 
+
+if ((year % 4) === 0 || (year % 400 === 0))
+{
+    if ((year % 100) === 0)
     {
-        return true;
+        yearChecker = "true";
     }
-    else return false;
+}
+else 
+{
+    yearChecker = "true";
+}
 
-};
+return yearChecker;
 
-leapYears(2000);
+}
+leapYears(1996);
 
 // Do not edit below this line
 module.exports = leapYears;
