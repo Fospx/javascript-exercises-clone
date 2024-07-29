@@ -9,24 +9,31 @@ const leapYears = function(year) {
     // if it does, then return false because the year divided by 100 is not a leap year
     // else if it does not return an integer then it is a leap year and divisble by 4 or by 400.
 
-let yearChecker; 
+let leapYears; 
 
-if ((year % 4) === 0 || (year % 400 === 0))
+if ((year % 4) === 0)
 {
-    if ((year % 100) === 0)
+    if ((year % 4) === 0 && (year % 100) === 0)
     {
-        yearChecker = "true";
+        leapYears = false
+        return leapYears
     }
-}
-else 
-{
-    yearChecker = "true";
+    leapYears = true;
+    return leapYears;
 }
 
-return yearChecker;
+if ((year % 100) === 0) {
+    if ((year % 400) === 0)
+    {
+        leapYears = true;
+        return leapYears;
+    }
+    leapYears = false;
+    return leapYears
+}
 
 }
-leapYears(1996);
+leapYears(1997);
 
 // Do not edit below this line
 module.exports = leapYears;
