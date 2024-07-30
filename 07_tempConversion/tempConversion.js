@@ -7,7 +7,7 @@ let celsius_answer = 0;
 // F = (x-32) * 5/9
 // formula calculation to convert fahrenheit to celsius
 celsius_answer = (fahrenheit - 32) * 5/9 
-return celsius_answer.toFixed(1);
+return Number(celsius_answer.toFixed(1));
 
 };
 
@@ -16,8 +16,8 @@ const convertToFahrenheit = function(celsius) {
 // C = (x * 9/5 + 32)
 let fahrenheit_answer = 0;
 
-fahrenheit_answer = Math.round((celsius * 9/5 + 32))
-return fahrenheit_answer.toFixed(1);
+fahrenheit_answer = (celsius * 9/5 + 32)
+return Number(fahrenheit_answer.toFixed(1));
 
 
 };
