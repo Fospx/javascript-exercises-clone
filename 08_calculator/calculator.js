@@ -1,6 +1,12 @@
-const add = function() {
-	
+const add = function(x, y) {
+	let addAnswer = 0; 
+  
+  addAnswer = x + y;
+
+  return addAnswer;
+
 };
+
 
 const subtract = function() {
 	
