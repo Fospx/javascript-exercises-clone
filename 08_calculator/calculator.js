@@ -8,8 +8,14 @@ const add = function(x, y) {
 };
 
 
-const subtract = function() {
-	
+const subtract = function(x, y) {
+	let subtractAnswer = 0;
+
+  subtractAnswer = x - y;
+
+  return subtractAnswer;
+
+
 };
 
 const sum = function() {
