@@ -28,11 +28,19 @@ const sum = function(array) {
   return sumAnswer;
 };
 
-sum([7,7])
+const multiply = function(array) {
 
-const multiply = function() {
+  let multiplyAnswer = 1;
 
+  for (i = 0; i < array.length; i++)
+  {
+    multiplyAnswer *= array[i];
+  }
+
+  return multiplyAnswer;
 };
+
+multiply([4, 5])
 
 const power = function() {
 	
