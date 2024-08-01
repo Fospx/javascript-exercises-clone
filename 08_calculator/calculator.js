@@ -56,11 +56,21 @@ const power = function(number, power) {
   return powerAnswer;
 };
 
-power(4, 3);
-
-const factorial = function() {
+const factorial = function(number) {
 	
+  let factorialAnswer = 1;
+  let length = number;
+
+  for (let i = 1; i <= length; i++ )
+  {
+    factorialAnswer *= i;
+  }
+
+  return factorialAnswer;
+
 };
+
+factorial(1);
 
 // Do not edit below this line
 module.exports = {
