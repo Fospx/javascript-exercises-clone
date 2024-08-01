@@ -15,12 +15,20 @@ const subtract = function(x, y) {
 
   return subtractAnswer;
 
-
 };
 
-const sum = function() {
-	
+const sum = function(array) {
+	let sumAnswer = 0; 
+
+  for (i = 0; i < array.length; i++)
+  {
+    sumAnswer += array[i];
+  }
+
+  return sumAnswer;
 };
+
+sum([7,7])
 
 const multiply = function() {
 
