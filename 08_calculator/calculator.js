@@ -42,9 +42,21 @@ const multiply = function(array) {
 
 multiply([4, 5])
 
-const power = function() {
+const power = function(number, power) {
 	
+  let powerAnswer = 1;
+
+  let repeatTimes = power;
+
+  for (i = 0; i < repeatTimes; i++)
+  {
+    powerAnswer *= number;
+  }
+
+  return powerAnswer;
 };
+
+power(4, 3);
 
 const factorial = function() {
 	
