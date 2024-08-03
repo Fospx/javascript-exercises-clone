@@ -40,7 +40,6 @@ const multiply = function(array) {
   return multiplyAnswer;
 };
 
-multiply([4, 5])
 
 const power = function(number, power) {
 	
@@ -69,8 +68,6 @@ const factorial = function(number) {
   return factorialAnswer;
 
 };
-
-factorial(1);
 
 // Do not edit below this line
 module.exports = {
