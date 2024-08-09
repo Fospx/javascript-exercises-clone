@@ -16,4 +16,5 @@ const palindromes = function (string) {
   return cleanedString === reversedString;
 };
 
+palindromes("racecar!")
 module.exports = palindromes;
