@@ -1,28 +1,44 @@
 const palindromes = function (string) {
 
-    // create a variable that has the original string
+    // COMPARE EACH CHARACTER INSTEAD OF THE WHOLE WORD ITSELF BECAUSE THAT WONT WORK
+    // if it gets to a punctuation mark or space just ignore it.
 
-    // loop through the string from the end
-    // compare this new string onto the original string
-    // if both of theses strings are the same, then it is a palindrome
-    // if it they are not the same then return as false and completely exit the program
+    //reverse string first and then compare each character
 
-    let originalString = string;
-    let newString = ""
-    for (let i  = originalString.length - 1; i >= 0; i--)
+let newString = "";
+let originString = string.toLowerCase();
+
+for (let i = originString.length - 1; i >= 0; i--)
+{
+    for (let j = 0; j < originString.length; j++)
     {
-        newString += string[i];
+        
+        if (originString[i] != originString[j])
+        {
+            if (originString[i] === "!")
+            {
+                i--;
+            }
+            
+        }
+        else 
+        {
+            newString += string[j];
+            i--
+        }
+        newString += string[j];
+
     }
 
-    if (originalString === newString)
-    {
-        return true;
-    }
-    else return false;
+}
+
+
+
+
     
 };
 
-palindromes("racecar");
+palindromes("Racecar!");
 
 // Do not edit below this line
 module.exports = palindromes;
