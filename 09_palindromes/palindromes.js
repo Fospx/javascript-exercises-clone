@@ -1,41 +1,28 @@
 const palindromes = function (string) {
 
-    // COMPARE EACH CHARACTER INSTEAD OF THE WHOLE WORD ITSELF BECAUSE THAT WONT WORK
-    // if it gets to a punctuation mark or space just ignore it.
+let alphaumerical = "abcdefghijklmnopqrstuvxyz0123456789";
 
-    //reverse string first and then compare each character
+//toLowerCase makes all the letters in the string into lowercase
 
-let newString = "";
-let originString = string.toLowerCase();
+//.split- splits up into an array of each letter in its own element
 
-for (let i = originString.length - 1; i >= 0; i--)
-{
-    for (let j = 0; j < originString.length; j++)
-    {
-        
-        if (originString[i] != originString[j])
-        {
-            if (originString[i] === "!")
-            {
-                i--;
-            }
-            
-        }
-        else 
-        {
-            newString += string[j];
-            i--
-        }
-        newString += string[j];
+// .filter- using the variable we created "alphanumerical" we can use this 
+// inside the argument for .filter(). it will only look for whatever is in that variable
+// and leave out the ones that are not on there
 
-    }
+// .join- joins the elements together onto one string
 
-}
+let originalString = string.toLowerCase().split("").filter((character) => alphaumerical.includes(character)).join("");
 
 
+// splits the originalString variable into individual elements and reverses it and 
+// joins it back together into one string onto the reverseString var.
+let reverseString = originalString.split("").reverse().join("");
 
+// this checks to see if they both are the same and will
+// return true
+return originalString == reverseString;
 
-    
 };
 
 palindromes("Racecar!");
